@@ -1,0 +1,29 @@
+// actually, structs like that won't be implemented for a long
+struct MyStruct {
+	lol int
+	wow bool
+
+	constructor(lol int = 5, wow bool = true) {
+		self.lol = lol
+		self.wow = wow
+	}
+
+	fn Lol() int {
+		return self.lol
+	}
+
+	fn Negotiate() {
+		self.wow = !self.wow
+	}
+
+	fn Do(req *http.Request) http.Response {
+		return http.NewResponse("eat shit")
+	}
+}
+
+fn main() int {
+    var myStruct MyStruct = MyStruct(5, false)
+    printf("%d\n", myStruct.Lol())
+
+    return 0
+}
