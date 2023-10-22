@@ -131,7 +131,7 @@ func (p *Parser) fnBody() (ast.Node, *comperr.Error) {
 
 		_, _ = p.match(lex.RBrace)
 
-		return ast.Block{Exprs: block, Position: lexeme.Position}, nil
+		return ast.Block{Exprs: block, Pos: lexeme.Position}, nil
 	default:
 		return p.expr()
 	}
